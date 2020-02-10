@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    background: #000000;
+}
+
+section .screen
+{
+    position: relative;
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: 1s;
+}
+section:hover .screen
+{
+    opacity: 0.2;
+
+}
+section .screen:hover
+{
+    flex-grow: 5;
+    opacity: 1;
+}
+section .screen:nth-child(1)
+{
+    background: url("nier4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section .screen:nth-child(2)
+{
+    background: url("wwe14.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section .screen:nth-child(3)
+{
+    background: url("wit4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section .screen:nth-child(4)
+{
+    background: url("pubg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section .screen:nth-child(5)
+{
+    background: url("wwe20.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section .screen .content
+{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    background: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+    transform: translateX(100%);
+    transition: 0.5s;
+    text-align: justify;
+}
+
+section .screen:hover .content
+{
+    transform: translateX(0);
+    transition-delay: 0.5s;
+}
+section .screen .content h2
+{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #ed363a;
+}
+section .screen .content p,h3
+{
+    margin: 0;
+    padding: 0;
+}

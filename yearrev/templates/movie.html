@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/anime.css' %}">
+    <style>
+        .row{
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+<a href="{% url 'movieadd' %}"><h1 >ADD</h1></a>
+
+<div class="containers">
+
+{% for movie in movie %}
+<div class="column" >
+                <div class="box">
+                            <div class="row" >
+                                <div class="column" >
+                                    <div class="imgbox">
+                                    <img src="{{movie.image}}"  width="200" height="300" >
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>{{ movie.title }}</h3>
+                                    <br>
+                                    <h3>Rating:</h3>
+                                    <p>{{ movie.rating }}</p>
+                                    <h3>watch date:</h3>
+                                    <p>{{ movie.date }}/{{ movie.month }}/{{ movie.get_year_display }}</p>
+                                </div>
+                            </div>
+                </div>
+
+        </div>
+{% endfor %}
+</div>
+
+
+</body>
+</html>

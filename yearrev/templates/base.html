@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Year reviewer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 >YEAR REVIEW</h1>
+        <ul>
+        <li>
+            <a href="{% url 'anime' %}">
+                <span>anime</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'movie' %}">
+                <span>Movies</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'game' %}">
+                <span>games</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'manga' %}">
+                <span>manga</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'book' %}">
+                <span>Books</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>Drawings</span>
+            </a>
+        </li>
+    </ul>
+    </div>
+</body>
+</html>

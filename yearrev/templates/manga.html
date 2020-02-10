@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/manga.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% for manga in manga %}
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="{{ manga.image }}" width="300" height="400" >
+            </div>
+            <div class="details">
+                <h2>{{ manga.title }}</h2>
+                <h3>Rating:</h3>
+                <p>{{ manga.rating }}</p>
+                <h3>read month and year:</h3>
+                <p>{{ manga.get_month_display }} {{ manga.get_year_display }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

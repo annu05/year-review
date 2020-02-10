@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% for book in book %}
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="{{ book.image }}" width="300" height="400" >
+            </div>
+            <div class="details">
+                <h2>{{ book.title }}</h2>
+                <h3>Rating:</h3>
+                <p>{{ book.rating }}</p>
+                <h3>read month and year:</h3>
+                <p>{{ book.get_month_display }} {{ book.get_year_display }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

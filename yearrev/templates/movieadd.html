@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOVIE BUZZ</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/movieadd.css' %}">
+
+
+
+
+</head>
+<body>
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="login-box">
+        <h1>ADD MOVIE</h1>
+        <div class="textbox">
+            <h2>Title:</h2>
+            {{ form.title }}
+        </div>
+         <div class="textbox">
+             <h2>image:</h2>
+            {{ form.image }}
+         </div>
+         <div class="textbox">
+             <h2>rating:</h2>
+            {{ form.rating }}
+         </div>
+         <div class="textbox">
+             <h2>watch date:</h2>
+            {{ form.date }}/{{ form.month}}/{{ form.year }}
+         </div>
+
+                   <div class="form-actions">
+                       <button type="submit" class="btn" >Submit</button>
+                  </div>
+
+    </div>
+</form>
+</body>
+</html>

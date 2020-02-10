@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOVIE BUZZ</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/animeadd.css' %}">
+
+
+
+
+</head>
+<body>
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="login-box">
+        <h1>ADD Anime</h1>
+        <div class="textbox">
+            <h2>Title:</h2>
+            {{ form.title }}
+        </div>
+         <div class="textbox">
+             <h2>image:</h2>
+            {{ form.image }}
+         </div>
+         <div class="textbox">
+             <h2>rating:</h2>
+            {{ form.rating }}
+         </div>
+        <div class="textbox">
+             <h2>episodes:</h2>
+            {{ form.episode }}
+         </div>
+         <div class="textbox">
+             <h2>start date:</h2>
+            {{ form.startdate }}/{{ form.startmonth }}/{{ form.startyear }}
+         </div>
+         <div class="textbox">
+             <h2>end date:</h2>
+            {{ form.enddate }}/{{ form.endmonth }}/{{ form.endyear }}
+         </div>
+
+                   <div class="form-actions">
+                       <button type="submit" class="btn" >Submit</button>
+                  </div>
+
+    </div>
+</form>
+</body>
+</html>
