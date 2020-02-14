@@ -2,13 +2,19 @@ from django.shortcuts import render, redirect
 
 from yearrev.forms import *
 from .models import *
+from django.db.models import Q
 
 def base(request):
     return render(request, 'base.html')
 
-def anime(request):
-    anime = Anime.objects.all()
-    return render(request, 'anime.html',{'anime':anime})
+def anime(request,pk):
+    query = pk
+    if query is not None:
+        lookups = Q(startyear__icontains=query)
+        results =Anime.objects.filter(lookups)
+        print(results)
+        context = {'results': results, }
+    return render(request, 'anime.html', context)
 
 def animeadd(request):
     if request.method == 'GET':
@@ -22,9 +28,14 @@ def animeadd(request):
             return redirect('anime')
     return render(request, 'animeadd.html',{'form':form})
 
-def movie(request):
-    movie = Movie.objects.all()
-    return render(request, 'movie.html',{'movie':movie})
+def movie(request,pk):
+    query = pk
+    if query is not None:
+        lookups = Q(year__icontains=query)
+        results = Movie.objects.filter(lookups)
+        print(results)
+        context = {'results': results, }
+    return render(request, 'movie.html', context)
 
 def movieadd(request):
     if request.method == 'GET':
@@ -48,4 +59,23 @@ def manga(request):
 def book(request):
     book = Book.objects.all()
     return render(request, 'book.html',{'book':book})
+
+def moviesyear(request):
+        return render(request, 'moviesyear.html')
+
+
+def animeyear(request):
+    return render(request, 'animeyear.html')
+def gameyear(request):
+    return render(request, 'gameyear.html')
+def game2019(request):
+    return render(request, 'gameyear2019.html')
+def game2018(request):
+    return render(request, 'gameyear2018.html')
+
+
+
+def editanime(request):
+    return render(request, 'animeedit.html')
+
 

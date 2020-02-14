@@ -64,6 +64,7 @@ class Anime(models.Model):
     )
     YEAR = (
         (1, '2020'),
+        (2, '2019'),
     )
     animeid = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100,unique=True)
@@ -71,7 +72,7 @@ class Anime(models.Model):
     rating = models.IntegerField(choices=RATING_CHOICES,default=1)
     startdate = models.IntegerField(choices=DATE ,default=1)
     startmonth = models.IntegerField(choices=MONTH,default=1)
-    startyear = models.IntegerField(choices=YEAR,default=1)
+    startyear = models.CharField(max_length=10,default=1)
     enddate = models.IntegerField(choices=DATE, default=1)
     endmonth = models.IntegerField(choices=MONTH, default=1)
     endyear = models.IntegerField(choices=YEAR, default=1)
@@ -142,6 +143,7 @@ class Movie(models.Model):
     )
     YEAR = (
         (1, '2020'),
+        (2, '2021'),
     )
     movieid = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100,unique=True)
@@ -149,7 +151,7 @@ class Movie(models.Model):
     rating = models.IntegerField(choices=RATING_CHOICES,default=1)
     date = models.IntegerField(choices=DATE ,default=1)
     month = models.IntegerField(choices=MONTH,default=1)
-    year = models.IntegerField(choices=YEAR,default=1)
+    year = models.CharField(max_length=10,default=2020)
 
     def __str__(self):
         return self.title

@@ -18,22 +18,22 @@
 
 <div class="containers">
 
-{% for movie in movie %}
+{% for result in results %}
 <div class="column" >
                 <div class="box">
                             <div class="row" >
                                 <div class="column" >
                                     <div class="imgbox">
-                                    <img src="{{movie.image}}"  width="200" height="300" >
+                                    <img src="{{result.image}}"  width="200" height="300" >
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h3>{{ movie.title }}</h3>
+                                    <h3>{{ result.title }}</h3>
                                     <br>
                                     <h3>Rating:</h3>
-                                    <p>{{ movie.rating }}</p>
+                                    <p>{{ result.rating }}</p>
                                     <h3>watch date:</h3>
-                                    <p>{{ movie.date }}/{{ movie.month }}/{{ movie.get_year_display }}</p>
+                                    <p>{{ result.date }}/{{ result.month }}/{{ result.year }}</p>
                                 </div>
                             </div>
                 </div>
