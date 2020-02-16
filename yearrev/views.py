@@ -25,7 +25,7 @@ def animeadd(request):
             review = form.save(commit=False)
             review.save()
             form = Animeform()
-            return redirect('anime')
+            return redirect('animeyear')
     return render(request, 'animeadd.html',{'form':form})
 
 def movie(request,pk):
@@ -46,7 +46,7 @@ def movieadd(request):
             review = form.save(commit=False)
             review.save()
             form =  Movieform()
-            return redirect('movie')
+            return redirect('movieyear')
     return render(request, 'movieadd.html',{'form':form})
 
 def game(request):
