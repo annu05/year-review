@@ -36,13 +36,13 @@ section .screen:hover
 }
 section .screen:nth-child(1)
 {
-    background: url("nier4.jpg");
+    background: url("assc.jpg");
     background-repeat: no-repeat;
     background-position: center;
 }
 section .screen:nth-child(2)
 {
-    background: url("wwe14.jpg");
+    background: url("lis.jpg");
     background-repeat: no-repeat;
     background-position: center;
 }

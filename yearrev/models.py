@@ -295,10 +295,10 @@ class Drawing(models.Model):
     )
     drawingid = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100,unique=True)
-    model_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+    model_pic = models.URLField(default='')
     date = models.IntegerField(choices=DATE, default=1)
     month = models.IntegerField(choices=MONTH,default=1)
-    year = models.IntegerField(choices=YEAR,default=1)
+    year = models.CharField(max_length=100,default="2020")
 
     def __str__(self):
         return self.title

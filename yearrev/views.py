@@ -72,10 +72,18 @@ def game2019(request):
     return render(request, 'gameyear2019.html')
 def game2018(request):
     return render(request, 'gameyear2018.html')
-
-
-
 def editanime(request):
     return render(request, 'animeedit.html')
+def drawingyear(request):
+    return render(request, 'drawingyear.html')
+
+def drawing(request,pk):
+    query = pk
+    if query is not None:
+        lookups = Q(year__icontains=query)
+        results = Drawing.objects.filter(lookups)
+        print(results)
+        context = {'results': results, }
+    return render(request, 'drawing2020.html', context)
 
 

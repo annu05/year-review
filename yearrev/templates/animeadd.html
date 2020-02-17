@@ -6,12 +6,28 @@
     <title>MOVIE BUZZ</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/animeadd.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
 
 </head>
 <body>
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"><i class="fa fa-bars"></i></a>
+    <a href="{% url 'base' %}" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="{% url 'animeyear' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Anime</a>
+    <a href="{% url 'movieyear' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Movie</a>
+    <a href="{% url 'gameyear' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Game</a>
+      <a href="{% url 'manga' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Manga</a>
+       <a href="{% url 'book' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Book</a>
+      <a href="{% url 'drawingyear' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Drawing</a>
+    </div>
+  </div>
+</div>
 
 
 <form method="post">

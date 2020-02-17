@@ -17,4 +17,7 @@ urlpatterns =[
     path('game/year', views.gameyear, name='gameyear'),
     path('manga', views.manga, name='manga'),
     path('book', views.book, name='book'),
+    path('drawing/year/',views.drawingyear,name='drawingyear'),
+    path('drawing/year/<int:pk>',views.drawing,name='drawing'),
+
 ]

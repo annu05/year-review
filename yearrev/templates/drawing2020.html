@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+    <link rel="stylesheet" href="{% static 'css/drawingyear.css' %}">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
@@ -24,23 +25,22 @@
     </div>
   </div>
 </div>
-    <div class="container">
-        {% for book in book %}
-
-        <div class="card">
-            <div class="imgbox">
-                <img src="{{ book.image }}" width="300" height="400" >
-            </div>
-            <div class="details">
-                <h2>{{ book.title }}</h2>
-                <h3>Rating:</h3>
-                <p>{{ book.rating }}</p>
-                <h3>read month and year:</h3>
-                <p>{{ book.get_month_display }} {{ book.get_year_display }}</p>
-            </div>
+{% for result in results %}
+<div class="container">
+    <div class="box">
+        <div class="imgbox">
+            <img src="{{ result.model_pic }}">
         </div>
-        {% endfor %}
+        <div class="content">
+            <h2>{{result.title}}</h2>
+            <p>{{ result.date }}/{{ result.month }}/{{ result.year }}</p>
+        </div>
     </div>
+
+</div>
+{% endfor %}
+
+
 
 </body>
 </html>
