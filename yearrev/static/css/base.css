@@ -104,6 +104,10 @@
             background: url("img6.jpg.jpeg");
             background-size: cover;
         }
+          ul li:nth-child(7):before {
+            background: url("cook.jpg");
+            background-size: cover;
+        }
 
           :root {
   /* Base font size */

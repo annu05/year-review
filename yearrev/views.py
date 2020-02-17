@@ -86,4 +86,7 @@ def drawing(request,pk):
         context = {'results': results, }
     return render(request, 'drawing2020.html', context)
 
+def cookingyear(request):
+    return render(request, 'cookingyear.html')
+
 

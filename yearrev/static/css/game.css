@@ -64,6 +64,12 @@ section .screen:nth-child(5)
     background-repeat: no-repeat;
     background-position: center;
 }
+section .screen:nth-child(6)
+{
+    background: url("gow.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 section .screen .content
 {

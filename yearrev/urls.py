@@ -19,5 +19,6 @@ urlpatterns =[
     path('book', views.book, name='book'),
     path('drawing/year/',views.drawingyear,name='drawingyear'),
     path('drawing/year/<int:pk>',views.drawing,name='drawing'),
+    path('cooking/year/',views.cookingyear,name='cookingyear'),
 
 ]
